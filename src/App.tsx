@@ -1,8 +1,14 @@
+import Header from './components/Header';
+import RoutesList from './components/RoutesList';
 import './styles.css';
 
 const App = () => {
-  // const name = "Todor";
-  return <h1>React Typescript Webpack Starter Template</h1>;
+  return (
+    <div>
+      <Header />
+      <RoutesList />
+    </div>
+  );
 };
 
 export default App;

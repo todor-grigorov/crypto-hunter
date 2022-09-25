@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Coin from '../pages/Coin';
+import CoinPage from '../pages/CoinPage';
 import Home from '../pages/Home';
 
 const RoutesList = (): JSX.Element => {
@@ -8,8 +8,8 @@ const RoutesList = (): JSX.Element => {
 
   return (
     <Routes>
-      <Route path="/test" element={<Coin />}></Route>
       <Route path="/" element={<Home />}></Route>
+      <Route path="/coins/:id" element={<CoinPage />}></Route>
     </Routes>
   );
 };

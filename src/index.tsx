@@ -1,15 +1,18 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import CryptoContext from './CryptoContext';
 
 const container = document.getElementById('root');
 const errorContainer = createNoRootElement();
 const root = createRoot(container || errorContainer);
 
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <CryptoContext>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </CryptoContext>
 );
 
 function createNoRootElement(): HTMLElement {
